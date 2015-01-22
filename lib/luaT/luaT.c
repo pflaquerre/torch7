@@ -451,9 +451,9 @@ int luaT_lua_newmetatable(lua_State *L)
   luaL_argcheck(L, lua_isnoneornil(L, 5) || lua_isfunction(L, 5), 5, "factory function or nil expected");
 
   if(is_in_module)
-    lua_getfield(L, LUA_GLOBALSINDEX, module_name);
+    lua_getglobal(L, module_name);
   else
-    lua_pushvalue(L, LUA_GLOBALSINDEX);
+    lua_pushglobaltable(L);
   if(!lua_istable(L, 6))
     luaL_error(L, "while creating metatable %s: bad argument #1 (%s is an invalid module name)", tname, module_name);
 

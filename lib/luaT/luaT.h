@@ -32,6 +32,13 @@ extern "C" {
 # define LUAT_API LUA_EXTERNC
 #endif
 
+// 5.1 compatibility
+#if !defined(LUA_VERSION_NUM) || (LUA_VERSION_NUM < 502)
+# ifndef lua_pushglobaltable
+#  define lua_pushglobaltable(L) lua_pushvalue((L), LUA_GLOBALSINDEX)
+# endif
+#endif
+
 
 /* C functions */
 
