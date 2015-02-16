@@ -88,8 +88,9 @@ LUAT_API int luaT_lua_getconstructortable(lua_State *L);
 LUAT_API int luaT_lua_typename(lua_State *L);
 LUAT_API int luaT_lua_isequal(lua_State *L);
 LUAT_API int luaT_lua_pointer(lua_State *L);
-LUAT_API int luaT_lua_setenv(lua_State *L);
-LUAT_API int luaT_lua_getenv(lua_State *L);
+// FIXME deprecated in 5.2
+//LUAT_API int luaT_lua_setenv(lua_State *L);
+//LUAT_API int luaT_lua_getenv(lua_State *L);
 LUAT_API int luaT_lua_getmetatable(lua_State *L);
 LUAT_API int luaT_lua_version(lua_State *L);
 LUAT_API int luaT_lua_setmetatable(lua_State *L);

@@ -798,6 +798,8 @@ int luaT_lua_pointer(lua_State *L)
   return 0;
 }
 
+// FIXME deprecated in 5.2
+/*
 int luaT_lua_setenv(lua_State *L)
 {
   if(!lua_isfunction(L, 1) && !lua_isuserdata(L, 1))
@@ -807,13 +809,14 @@ int luaT_lua_setenv(lua_State *L)
   return 0;
 }
 
-int luaT_lua_getenv(lua_State *L)
+// FIXME deprecated in 5.2
 {
   if(!lua_isfunction(L, 1) && !lua_isuserdata(L, 1))
     luaL_typerror(L, 1, "function or userdata");
   lua_getfenv(L, 1);
   return 1;
 }
+*/
 
 int luaT_lua_getmetatable(lua_State *L)
 {

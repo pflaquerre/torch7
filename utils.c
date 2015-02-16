@@ -189,8 +189,9 @@ static const struct luaL_Reg torch_utils__ [] = {
   {"getconstructortable", luaT_lua_getconstructortable},
   {"typename", luaT_lua_typename},
   {"isequal", luaT_lua_isequal},
-  {"getenv", luaT_lua_getenv},
-  {"setenv", luaT_lua_setenv},
+// FIXME deprecated in 5.2
+  /*{"getenv", luaT_lua_getenv},*/
+  /*{"setenv", luaT_lua_setenv},*/
   {"newmetatable", luaT_lua_newmetatable},
   {"setmetatable", luaT_lua_setmetatable},
   {"getmetatable", luaT_lua_getmetatable},
